@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import com.google.firebase.database.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivityEvent : AppCompatActivity() {
     private lateinit var btnAddData: Button
     private lateinit var btnViewData: Button
     private lateinit var eventcont: TextView
@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_event_dashbord)
 
         // Get a reference to the Firebase database
         firebaseRef = FirebaseDatabase.getInstance().reference

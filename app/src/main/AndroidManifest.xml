@@ -12,7 +12,10 @@
         android:theme="@style/Theme.CrudApp"
         tools:targetApi="31">
         <activity
-            android:name=".bottam_nav"
+            android:name=".Bottam_nav"
+            android:exported="false" />
+        <activity
+            android:name=".Bottam_navbar"
             android:exported="false" />
         <activity
             android:name=".ViewContent"
@@ -27,7 +30,7 @@
             android:name=".AddData"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivityEvent"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
