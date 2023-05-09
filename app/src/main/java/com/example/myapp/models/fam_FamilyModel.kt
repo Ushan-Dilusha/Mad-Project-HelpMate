@@ -1,6 +1,6 @@
 package com.example.myapp.models
 
-data class FamilyModel(
+data class fam_FamilyModel(
     var famId: String? = null,
     var famName: String? = null,
     var famAdd: String? = null,

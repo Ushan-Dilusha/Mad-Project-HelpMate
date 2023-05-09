@@ -4,8 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgorund"
     android:padding="16dp"
-    tools:context=".activities.InsertionActivity">
+    tools:context=".activities.fam_InsertionActivity">
+
+    <include layout="@layout/activity_header"/>
+    <include layout="@layout/bottam_nav"/>
 
     <EditText
         android:id="@+id/etFamName"

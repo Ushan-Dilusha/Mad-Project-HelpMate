@@ -1,16 +1,18 @@
 package com.example.myapp.activities
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
-import com.example.myapp.models.FamilyModel
+import com.example.myapp.models.fam_FamilyModel
 import com.example.myapp.R
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class InsertionActivity : AppCompatActivity() {
+class fam_InsertionActivity : AppCompatActivity() {
 
     private lateinit var etFamName: EditText
     private lateinit var etFamAdd: EditText
@@ -19,9 +21,15 @@ class InsertionActivity : AppCompatActivity() {
 
     private lateinit var dbRef: DatabaseReference
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_insertion)
+        setContentView(R.layout.fam_activity_insertion)
+
+        val backNavImageView = findViewById<ImageView>(R.id.iv_backnav)
+        backNavImageView.setOnClickListener {
+            onBackPressed()
+        }
 
         etFamName = findViewById(R.id.etFamName)
         etFamAdd = findViewById(R.id.etFamAdd)
@@ -45,16 +53,17 @@ class InsertionActivity : AppCompatActivity() {
         if (famName.isEmpty()) {
             etFamName.error = "Please Enter Name"
         }
-        if (famAdd.isEmpty()) {
+        else if (famAdd.isEmpty()) {
             etFamAdd.error = "Please Enter Address"
         }
-        if (famDes.isEmpty()) {
+        else if (famDes.isEmpty()) {
             etFamDes.error = "Please Enter Description"
         }
+        else{
 
         val famId = dbRef.push().key!!
 
-        val family = FamilyModel(famId, famName, famAdd, famDes)
+        val family = fam_FamilyModel(famId, famName, famAdd, famDes)
 
         dbRef.child(famId).setValue(family)
             .addOnCompleteListener {
@@ -71,4 +80,5 @@ class InsertionActivity : AppCompatActivity() {
 
     }
 
+ }
 }

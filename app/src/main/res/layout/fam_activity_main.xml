@@ -5,7 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MainActivity">
+    android:background="@drawable/backgorund"
+    tools:context=".activities.fam_MainActivity">
+
+    <include layout="@layout/activity_header"/>
+    <include layout="@layout/bottam_nav"/>
 
     <TextView
         android:id="@+id/textView"

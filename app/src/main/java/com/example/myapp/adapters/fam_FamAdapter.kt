@@ -6,10 +6,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapp.R
-import com.example.myapp.models.FamilyModel
+import com.example.myapp.models.fam_FamilyModel
 
-class FamAdapter(private val famList: ArrayList<FamilyModel>) :
-    RecyclerView.Adapter<FamAdapter.ViewHolder>() {
+class fam_FamAdapter(private val famList: ArrayList<fam_FamilyModel>) :
+    RecyclerView.Adapter<fam_FamAdapter.ViewHolder>() {
 
     private lateinit var mListener: onItemClickListener
 

@@ -12,16 +12,16 @@
         android:theme="@style/Theme.MyApp"
         tools:targetApi="31">
         <activity
-            android:name=".EmployeeDetailsActivity"
+            android:name=".activities.fam_FamilyDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.FetchingActivity"
+            android:name=".activities.fam_FetchingActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.InsertionActivity"
+            android:name=".activities.fam_InsertionActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".activities.fam_MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

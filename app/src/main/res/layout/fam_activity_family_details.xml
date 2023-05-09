@@ -3,8 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/backgorund"
     android:layout_height="match_parent"
-    tools:context=".activities.FamilyDetailsActivity">
+    tools:context=".activities.fam_FamilyDetailsActivity">
+
+    <include layout="@layout/activity_header"/>
+    <include layout="@layout/bottam_nav"/>
 
     <Button
         android:id="@+id/btnUpdate"
@@ -32,10 +36,12 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="76dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        android:orientation="vertical">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <LinearLayout

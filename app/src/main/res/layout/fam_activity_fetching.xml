@@ -3,9 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/backgorund"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.FetchingActivity">
+    tools:context=".activities.fam_FetchingActivity">
+
+    <include layout="@layout/activity_header"/>
+    <include layout="@layout/bottam_nav"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvFam"
